@@ -1,6 +1,5 @@
 import { Facebook, Google, LinkedIn } from '@mui/icons-material'
 import * as S from './style'
-import axios from 'axios'
 
 export const Login = () => {
   return (

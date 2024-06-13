@@ -10,6 +10,8 @@ export const Cadastro = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [message, setMessage] = useState('')
+  const [error, setError] = useState(false)
 
   const user = {
     name: name,
@@ -22,9 +24,25 @@ export const Cadastro = () => {
 
   const handleCreateUser = async () => {
     console.log(user)
-    await axios.post('http://localhost:3000/api/v1/user', user).then((response) => {
-      console.log(response)
-    })
+    await axios
+      .post('http://localhost:3000/api/v1/user', user)
+      .then((response) => {
+        console.log(response)
+        setMessage('Usuário criado com sucesso!')
+        setError(false)
+      })
+      .catch((error) => {
+        console.log(error)
+        if (error.response.data[0].code === 'too_small') {
+          setMessage('A senha precisa ter pelo menos 8 caracteres')
+          setError(true)
+        }
+
+        if (error.response.data[0].code === 'invalid_string') {
+          setMessage('Email inválido')
+          setError(true)
+        }
+      })
   }
 
   return (
@@ -43,7 +61,7 @@ export const Cadastro = () => {
         </S.LeftSideContainer>
         <S.RightSideContainer id='container-direita'>
           <S.Formulario>
-            <h1>Login</h1>
+            <h1>Crie sua conta</h1>
             <div>
               <S.MenuButton>
                 <Facebook />
@@ -55,6 +73,7 @@ export const Cadastro = () => {
                 <LinkedIn />
               </S.MenuButton>
             </div>
+            {error ? <p style={{ color: 'red' }}>{message}</p> : <p style={{ color: 'green' }}>{message}</p>}
             <p>Ou continue usando seu e-mail</p>
             <input type='text' placeholder='Nome' onChange={(event) => setName(event.target.value)} />
             <input type='text' placeholder='E-mail' onChange={(event) => setEmail(event.target.value)} />

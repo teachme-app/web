@@ -39,7 +39,7 @@ export const Formulario = styled.form`
   width: 75%;
   display: flex;
   flex-direction: column;
-  height: 47%;
+  height: 52%;
   background-color: #fbf4ea;
   border-radius: 30px;
   -webkit-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);

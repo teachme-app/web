@@ -56,7 +56,7 @@ export const Menu = () => {
             }}
           >
             <List>
-              {['Inicio', 'Baixados', 'Material', 'Cursos', 'Carrinho', 'Perfil'].map((text, index) => (
+              {['Inicio', 'Baixados', 'Material', 'Cursos', 'Carrinho', 'Perfil'].map((text) => (
                 <ListItem key={text} disablePadding>
                   <ListItemButton>
                     <ListItemText primary={text} />
