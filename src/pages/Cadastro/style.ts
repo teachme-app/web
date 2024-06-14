@@ -77,9 +77,12 @@ export const Formulario = styled.form`
   }
 `
 
-export const RegisterButton = styled.button`
+export const RegisterButton = styled.a`
   width: 50%;
   height: 35px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
   margin-top: 20px;
   border: 2px solid #ff9740;
   border-radius: 20px;
@@ -91,6 +94,7 @@ export const RegisterButton = styled.button`
 export const Wave = styled.img`
   align-self: flex-end;
   margin-top: auto;
+  width: 100%;
 `
 
 export const Container = styled.div`

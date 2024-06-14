@@ -57,7 +57,7 @@ export const Cadastro = () => {
             <p>Não é inscrito? Conheça o Teach.Me!</p>
             <a href='#'>Cadastro</a>
           </S.TextContainer>
-          <S.Wave src='public/wave.svg' alt='' id='wave' />
+          <S.Wave src='/wave.svg' alt='' id='wave' />
         </S.LeftSideContainer>
         <S.RightSideContainer id='container-direita'>
           <S.Formulario>
@@ -82,13 +82,7 @@ export const Cadastro = () => {
               placeholder='Senha'
               onChange={(event) => setPassword(event.target.value)}
             />
-            <S.RegisterButton
-              onClick={() => {
-                handleCreateUser()
-              }}
-            >
-              CADASTRAR
-            </S.RegisterButton>
+            <S.RegisterButton onClick={() => handleCreateUser()}>CADASTRAR</S.RegisterButton>
           </S.Formulario>
         </S.RightSideContainer>
       </S.Container>
