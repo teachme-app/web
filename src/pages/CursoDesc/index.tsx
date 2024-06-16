@@ -1,8 +1,10 @@
+import { Menu } from '../../components/Menu'
 import * as S from './styles'
 
 export const DescCursos = () => {
     return (
         <>
+         <Menu />
           <S.Container>
             <S.LeftSideContainer>
               <div>
@@ -36,7 +38,7 @@ export const DescCursos = () => {
             <S.BottomSideContainer id='container-bottom'>
               <S.div3>
                 <div> 
-                <S.img2 src='/pessoa.png' alt='pessoa' width='317' height='317' />
+                
                 <h1>R$XXXXXXX,XXXXXX</h1>
                 <S.button> Adicionar Carrinho </S.button>
     

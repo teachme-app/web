@@ -41,6 +41,7 @@ export const Items = styled.li`
 export const InputItem = styled.li`
   margin-right: 10px;
   margin-left: 10px;
+  
 `
 
 export const Input = styled.input`
@@ -49,4 +50,5 @@ export const Input = styled.input`
   border-radius: 5px;
   border: none;
   padding-left: 10px;
+  
 `

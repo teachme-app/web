@@ -2,25 +2,29 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
-backgroundColor: '#f5f5f5',
+backgroundColor: '#99999',
 
 `
 
 export const LeftSideContainer = styled.div`
 width: 50%;
-background-color: #ff9740;
+background-color: ;
 height: 100vh;
 display: flex;
 flex-direction: column;
 `
 
 export const img = styled.img`
+
+margin-top: 30px;
+margin-left: 40px;
+
 `
 
 
 export const TitleContainer = styled.div`
     h1 {
-        color:pink,
+        size: 20px,
     }
 `
 
