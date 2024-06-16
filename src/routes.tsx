@@ -6,6 +6,8 @@ import { Navegar } from './pages/Navegar'
 import { Cadastro } from './pages/Cadastro'
 import { MeusCursos } from './pages/MeusCursos'
 import { Perfil } from './pages/Perfil'
+import { Downloads } from './pages/Downloads'
+import { Aula } from './pages/Aula'
 
 export const appRoutes = createBrowserRouter([
   {
@@ -35,5 +37,13 @@ export const appRoutes = createBrowserRouter([
   {
     path: '/perfil',
     element: <Perfil />,
+  },
+  {
+    path: '/downloads',
+    element: <Downloads />,
+  },
+  {
+    path: '/aula',
+    element: <Aula />,
   },
 ])

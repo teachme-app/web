@@ -51,7 +51,7 @@ export const MenuNav = () => {
           <S.ItemLink to='/'>início</S.ItemLink>
         </S.MenuItem>
         <S.MenuItem item xl={1.1} md={1.1}>
-          <S.ItemLink to='/'>baixados</S.ItemLink>
+          <S.ItemLink to='/downloads'>baixados</S.ItemLink>
         </S.MenuItem>
         <S.MenuItem item xl={1.1} md={1.1}>
           <S.ItemLink to='/'>material</S.ItemLink>
