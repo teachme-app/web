@@ -8,7 +8,7 @@ export const DescCursos = () => {
       <S.Container>
         <S.LeftSideContainer>
           <div>
-            <S.img src='/place-holder-image.png' alt='place holder' width='970' />
+            <S.img src='/place-holder-image.png' alt='place holder'  />
           </div>
           <S.TitleContainer>
             <h1>Título do curso</h1>
@@ -32,8 +32,8 @@ export const DescCursos = () => {
         <S.RightSideContainer id='container-direita'>
           <S.div2>
             <div>
-              <S.img2 src='/pessoa.png' alt='pessoa' width='317' height='317' />
-              <h1>Nome do professor</h1>
+              <S.img2 src='/PessoaBolinha.png' alt='pessoa'  />
+              <h1>Perfil do professor</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis ullamcorper elementum.
                 Donec molestie lacinia purus, ac dapibus velit sollicitudin maximus. Donec at vulputate felis.
@@ -42,16 +42,16 @@ export const DescCursos = () => {
               </p>
             </div>
           </S.div2>
-
+          </S.RightSideContainer>
           <S.BottomSideContainer id='container-bottom'>
             <S.div3>
               <div>
                 <h1>R$XXXXXXX,XXXXXX</h1>
-                <S.button> Adicionar Carrinho </S.button>
+                <S.button> Adicionar ao Carrinho </S.button>
               </div>
             </S.div3>
           </S.BottomSideContainer>
-        </S.RightSideContainer>
+        
       </S.Container>
     </>
   )
