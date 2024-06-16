@@ -2,6 +2,7 @@ import { useState } from 'react'
 import * as S from './style'
 import { IconButton, Grid, Hidden, Drawer, List, ListItem, ListItemText, ListItemButton } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
+import { Link } from 'react-router-dom'
 
 export const Menu = () => {
   const [open, setOpen] = useState(false)
@@ -21,26 +22,26 @@ export const Menu = () => {
       </Grid>
       <Hidden mdDown>
         <S.MenuItem item xl={1.1} md={1.1}>
-          <S.ItemLink href='#'>início</S.ItemLink>
+          <S.ItemLink to='/'>início</S.ItemLink>
         </S.MenuItem>
         <S.MenuItem item xl={1.1} md={1.1}>
-          <S.ItemLink href='#'>baixados</S.ItemLink>
+          <S.ItemLink to='/'>baixados</S.ItemLink>
         </S.MenuItem>
         <S.MenuItem item xl={1.1} md={1.1}>
-          <S.ItemLink href='#'>material</S.ItemLink>
+          <S.ItemLink to='/'>material</S.ItemLink>
         </S.MenuItem>
         <S.MenuItem item xl={1.1} md={1.1}>
-          <S.ItemLink href='#'>cursos</S.ItemLink>
+          <S.ItemLink to='/meus-cursos'>cursos</S.ItemLink>
         </S.MenuItem>
         <Grid item xl={0.5} md={0.4}>
-          <a href='#'>
+          <Link to={'/carrinho'}>
             <img src='/carrinho.png' width='40px' height='40px' />
-          </a>
+          </Link>
         </Grid>
         <Grid item xl={0.5} md={0.2}>
-          <a href='#'>
+          <Link to={'/'}>
             <img src='/pessoa.png' width='32px' height='41.1px' id='pessoa2' />
-          </a>
+          </Link>
         </Grid>
       </Hidden>
       <Hidden mdUp>

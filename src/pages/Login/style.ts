@@ -23,23 +23,13 @@ export const TextContainer = styled.div`
     margin-bottom: 25px;
     font-size: 20px;
   }
-  a {
-    color: white;
-    text-decoration: none;
-    border: 1px solid white;
-    padding: 10px;
-    border-radius: 20%;
-    align-self: center;
-    width: 300px;
-    text-align: center;
-  }
 `
 
 export const Formulario = styled.form`
   width: 75%;
   display: flex;
   flex-direction: column;
-  height: 40%;
+  height: 52%;
   background-color: #fbf4ea;
   border-radius: 30px;
   -webkit-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);
@@ -77,9 +67,36 @@ export const Formulario = styled.form`
   }
 `
 
+export const RegisterButton = styled.a`
+  width: 50%;
+  height: 35px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 20px;
+  border: 2px solid #ff9740;
+  border-radius: 20px;
+  background-color: #fbf4ea;
+  font-weight: 600;
+  color: #ff9740;
+`
+
+export const LeftButton = styled.button`
+  background-color: #ff9740;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 100px;
+  align-self: center;
+  width: 300px;
+  text-align: center;
+`
+
 export const Wave = styled.img`
   align-self: flex-end;
   margin-top: auto;
+  width: 100%;
 `
 
 export const Container = styled.div`

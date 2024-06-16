@@ -2,6 +2,7 @@ import { Facebook, Google, LinkedIn } from '@mui/icons-material'
 import * as S from './style'
 import axios from 'axios'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export const Cadastro = () => {
   const document = '99999999999'
@@ -55,7 +56,9 @@ export const Cadastro = () => {
           <S.TextContainer>
             <h1>Bem-Vindo!</h1>
             <p>Não é inscrito? Conheça o Teach.Me!</p>
-            <a href='#'>Cadastro</a>
+            <Link to={'/login'}>
+              <S.LeftButton>Login</S.LeftButton>
+            </Link>
           </S.TextContainer>
           <S.Wave src='/wave.svg' alt='' id='wave' />
         </S.LeftSideContainer>

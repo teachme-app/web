@@ -1,4 +1,5 @@
 import { Grid } from '@mui/material'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Container = styled(Grid)`
@@ -16,22 +17,29 @@ export const MenuContainer = styled.div`
 `
 
 export const LogoItem = styled.img`
-  margin-left: 10px;
+  margin-left: 5px;
+  cursor: pointer;
 `
 
 export const MenuItem = styled(Grid)`
   align-items: center;
   height: 50px;
+  cursor: pointer;
   background-color: white;
   display: flex;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 50px;
+
+  &:hover {
+    background-color: #ccc;
+  }
 `
 
-export const ItemLink = styled.a`
+export const ItemLink = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: #ff9740;
   font-size: 20px;
+  text-decoration: none;
 `
 
 export const Items = styled.li`
@@ -41,14 +49,12 @@ export const Items = styled.li`
 export const InputItem = styled.li`
   margin-right: 10px;
   margin-left: 10px;
-  
 `
 
 export const Input = styled.input`
   width: 95%;
   height: 50px;
-  border-radius: 5px;
+  border-radius: 50px;
   border: none;
-  padding-left: 10px;
-  
+  padding-left: 20px;
 `

@@ -1,5 +1,6 @@
 import { Facebook, Google, LinkedIn } from '@mui/icons-material'
 import * as S from './style'
+import { Link } from 'react-router-dom'
 
 export const Login = () => {
   return (
@@ -12,7 +13,9 @@ export const Login = () => {
           <S.TextContainer>
             <h1>Bem-Vindo!</h1>
             <p>Não é inscrito? Conheça o Teach.Me!</p>
-            <a href='#'>Cadastro</a>
+            <Link to={'/cadastro'}>
+              <S.LeftButton>Cadastro</S.LeftButton>
+            </Link>
           </S.TextContainer>
           <S.Wave src='public/wave.svg' alt='' id='wave' />
         </S.LeftSideContainer>

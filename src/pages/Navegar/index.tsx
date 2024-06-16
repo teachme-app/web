@@ -1,27 +1,30 @@
 import * as S from './style'
 import { Menu } from '../../components/Menu'
-import { CarouselCursos }  from '../../components/Carousel'
-
+import { CarouselCursos } from '../../components/Carousel'
 
 export const Navegar = () => {
   return (
     <>
-    <Menu />
+      <Menu />
       <S.Container>
-        <S.Banner>  
+        <S.Banner>
           <CarouselCursos />
         </S.Banner>
-        
+        <S.Cursos>
+          <S.Curso>
+            <S.CursoImg src='/curso1.png' />
+            <S.CursoTitle>Curso Técnico</S.CursoTitle>
+          </S.Curso>
+          <S.Curso>
+            <S.CursoImg src='/curso1.png' />
+            <S.CursoTitle>Curso Técnico</S.CursoTitle>
+          </S.Curso>
+          <S.Curso>
+            <S.CursoImg src='/curso1.png' />
+            <S.CursoTitle>Curso Técnico</S.CursoTitle>
+          </S.Curso>
+        </S.Cursos>
       </S.Container>
-
-      <S.ImgContainer>
-        <S.ImgCurso>
-          <S.Curso1><h1>Curso Técnico</h1></S.Curso1>
-          <S.Curso2><h1>Curso Técnico</h1></S.Curso2>
-          <S.Curso3><h1>Curso Técnico</h1></S.Curso3>
-        </S.ImgCurso>
-      </S.ImgContainer>
     </>
-  );
-};
-
+  )
+}

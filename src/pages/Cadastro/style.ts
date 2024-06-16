@@ -23,16 +23,6 @@ export const TextContainer = styled.div`
     margin-bottom: 25px;
     font-size: 20px;
   }
-  a {
-    color: white;
-    text-decoration: none;
-    border: 1px solid white;
-    padding: 10px;
-    border-radius: 20%;
-    align-self: center;
-    width: 300px;
-    text-align: center;
-  }
 `
 
 export const Formulario = styled.form`
@@ -89,6 +79,18 @@ export const RegisterButton = styled.a`
   background-color: #fbf4ea;
   font-weight: 600;
   color: #ff9740;
+`
+
+export const LeftButton = styled.button`
+  background-color: #ff9740;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 100px;
+  align-self: center;
+  width: 300px;
+  text-align: center;
 `
 
 export const Wave = styled.img`
