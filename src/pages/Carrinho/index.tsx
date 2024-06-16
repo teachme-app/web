@@ -1,10 +1,10 @@
-import { Menu } from '../../components/Menu'
+import { MenuNav } from '../../components/Menu'
 import * as S from './style'
 
 export const Carrinho = () => {
   return (
     <div>
-      <Menu />
+      <MenuNav />
       <S.Container>
         <S.CursosContainer>
           <S.SingleCourseContainer>

@@ -1,5 +1,5 @@
 import { Grid, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material'
-import { Menu } from '../../components/Menu'
+import { MenuNav } from '../../components/Menu'
 import * as S from './style'
 import { useState } from 'react'
 
@@ -12,7 +12,7 @@ export const MeusCursos = () => {
 
   return (
     <S.Container>
-      <Menu />
+      <MenuNav />
       <Grid container sx={{ marginTop: '30px' }}>
         <Grid item xs={10}>
           <S.Title>Meus Cursos</S.Title>

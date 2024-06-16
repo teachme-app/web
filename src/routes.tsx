@@ -5,6 +5,7 @@ import { Carrinho } from './pages/Carrinho'
 import { Navegar } from './pages/Navegar'
 import { Cadastro } from './pages/Cadastro'
 import { MeusCursos } from './pages/MeusCursos'
+import { Perfil } from './pages/Perfil'
 
 export const appRoutes = createBrowserRouter([
   {
@@ -30,5 +31,9 @@ export const appRoutes = createBrowserRouter([
   {
     path: '/meus-cursos',
     element: <MeusCursos />,
+  },
+  {
+    path: '/perfil',
+    element: <Perfil />,
   },
 ])

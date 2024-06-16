@@ -1,11 +1,11 @@
 import * as S from './style'
-import { Menu } from '../../components/Menu'
+import { MenuNav } from '../../components/Menu'
 import { CarouselCursos } from '../../components/Carousel'
 
 export const Navegar = () => {
   return (
     <>
-      <Menu />
+      <MenuNav />
       <S.Container>
         <S.Banner>
           <CarouselCursos />
