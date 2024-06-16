@@ -1,8 +1,15 @@
-import { FormControl, Grid, InputLabel, MenuItem, Select } from '@mui/material'
+import { Grid, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material'
 import { Menu } from '../../components/Menu'
 import * as S from './style'
+import { useState } from 'react'
 
 export const MeusCursos = () => {
+  const [categoria, setCategoria] = useState('')
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setCategoria(event.target.value as string)
+  }
+
   return (
     <S.Container>
       <Menu />
@@ -13,10 +20,10 @@ export const MeusCursos = () => {
         <Grid item xs={2}>
           <S.FormControlStyle>
             <InputLabel id='demo-simple-select-label'>Categorias</InputLabel>
-            <Select label='Categorias'>
-              <MenuItem>Ten</MenuItem>
-              <MenuItem>Twenty</MenuItem>
-              <MenuItem>Thirty</MenuItem>
+            <Select value={categoria} label='Categorias' onChange={handleChange}>
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
             </Select>
           </S.FormControlStyle>
         </Grid>

@@ -35,12 +35,26 @@ export const Menu = () => {
         </S.MenuItem>
         <Grid item xl={0.5} md={0.4}>
           <Link to={'/carrinho'}>
-            <img src='/carrinho.png' width='40px' height='40px' />
+            <div style={{ height: '55px', width: '55px', marginTop: '5px', marginLeft: '10px' }}>
+              <img src='/carrinho.png' width='40px' height='40px' />
+            </div>
           </Link>
         </Grid>
         <Grid item xl={0.5} md={0.2}>
           <Link to={'/'}>
-            <img src='/pessoa.png' width='32px' height='41.1px' id='pessoa2' />
+            <div
+              style={{
+                height: '55px',
+                width: '55px',
+                backgroundColor: '#FDF9F3',
+                borderRadius: '50%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <img src='/pessoa.png' width='32px' height='41.1px' id='pessoa2' />
+            </div>
           </Link>
         </Grid>
       </Hidden>
