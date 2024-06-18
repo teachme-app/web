@@ -8,6 +8,7 @@ import { MeusCursos } from './pages/MeusCursos'
 import { Perfil } from './pages/Perfil'
 import { Downloads } from './pages/Downloads'
 import { Aula } from './pages/Aula'
+import Materiais from './pages/Material'
 
 export const appRoutes = createBrowserRouter([
   {
@@ -45,5 +46,10 @@ export const appRoutes = createBrowserRouter([
   {
     path: '/aula',
     element: <Aula />,
+  },
+
+  {
+    path: '/materiais',
+    element: <Materiais />,
   },
 ])
