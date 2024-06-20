@@ -8,34 +8,44 @@ export const Aula = () => {
       <S.Container>
         <S.LeftContainer>
           <S.VideoContainer>
-            <S.Video src='https://www.youtube.com/embed/7e90gBu4pas' />
+            <S.VideoPlayer src='https://www.youtube.com/embed/7e90gBu4pas' />
           </S.VideoContainer>
-          <S.DescContainer>
-            <S.Rating>
-              <S.StarIcon />
-              <S.StarIcon />
-              <S.StarIcon />
-              <S.StarIcon />
-              <S.StarIcon />
-            </S.Rating>
-            <div style={{ marginTop: '35px', alignSelf: 'start' }}>
-              <S.Conclusion>Concluir</S.Conclusion>
-              <S.ConcluirIcone />
-            </div>
-          </S.DescContainer>
-          <S.DescTextContainer>
-            <S.VideoTitle>Titulo do Curso</S.VideoTitle>
-            <S.VideoDescription>Descrição do Curso</S.VideoDescription>
-          </S.DescTextContainer>
+          <S.VideoInfo>
+            <S.LeftInfo>
+              <S.CursoDesc>curso - nome do curso</S.CursoDesc>
+            </S.LeftInfo>
+            <S.RightInfo>
+              <S.CursoDesc>
+                Concluir
+                <S.CheckIconAula style={{ marginLeft: '10px', marginBottom: '3px' }} />
+              </S.CursoDesc>
+              <S.Rating>
+                <S.StarIcon />
+                <S.StarIcon />
+                <S.StarIcon />
+                <S.StarIcon />
+                <S.StarIcon />
+              </S.Rating>
+            </S.RightInfo>
+          </S.VideoInfo>
+          <S.VideoDesc>
+            <S.VideoTitle>Aula 1</S.VideoTitle>
+            <S.VideoDesc>
+              Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum{' '}
+            </S.VideoDesc>
+          </S.VideoDesc>
         </S.LeftContainer>
         <S.RightContainer>
-          <S.RightTitle>Lista de Conteudo</S.RightTitle>
-          <S.Aula>
-            <S.NumberAula>1</S.NumberAula>
-            <S.BannerAula src='/curso1.png' />
-            <S.TituloAula>Aula 1</S.TituloAula>
-            <S.ConcluirIcone />
-          </S.Aula>
+          <S.Title>Lista de Conteudo</S.Title>
+          <S.AulasContainer>
+            <S.Aula>
+              <S.AulaBanner src='/curso1.png' />
+              <S.AulaTitle>aula - nome da aula</S.AulaTitle>
+              <S.CheckAula>
+                <S.CheckIconAula />
+              </S.CheckAula>
+            </S.Aula>
+          </S.AulasContainer>
         </S.RightContainer>
       </S.Container>
     </>

@@ -4,119 +4,112 @@ import CheckIcon from '@mui/icons-material/Check'
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
+  margin-top: 30px;
 `
 
 export const LeftContainer = styled.div`
-  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
-
-export const RightContainer = styled.div`
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+  width: 60%;
+  margin-right: 20px;
 `
 
 export const VideoContainer = styled.div`
-  width: 95%;
-  height: 60vh;
-  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
 `
 
-export const Video = styled.iframe`
+export const VideoPlayer = styled.iframe`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 `
 
-export const Rating = styled.div`
+export const VideoInfo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+`
+
+export const LeftInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+export const CursoDesc = styled.p`
+  font-size: 20px;
+  font-weight: 700;
+`
+
+export const RightInfo = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
-  width: 50%;
+`
+
+export const Rating = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  margin-left: 20px;
 `
 
 export const StarIcon = styled(StarBorderOutlined)`
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  margin-right: 10px;
-  margin-top: 10px;
+  color: #f1c40f;
 `
 
-export const Conclusion = styled.a`
-  width: 50%;
-  padding: 10px;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
+export const VideoDesc = styled.div`
   margin-top: 20px;
 `
 
-export const VideoTitle = styled.h1`
-  margin-top: 20px;
-`
-
-export const VideoDescription = styled.p`
-  margin-top: 20px;
-`
-
-export const RightTitle = styled.h1`
-  margin-top: 20px;
+export const VideoTitle = styled.p`
+  font-size: 20px;
+  font-weight: 700;
 `
 
 export const Aula = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  margin-top: 20px;
+  background-color: #eaeaea;
+  padding: 20px;
+`
+
+export const AulaBanner = styled.img`
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+`
+
+export const AulaTitle = styled.p`
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 20px;
+`
+
+export const CheckAula = styled.div`
+  margin-left: auto;
+`
+
+export const RightContainer = styled.div`
+  width: 30%;
+`
+
+export const Title = styled.p`
+  font-size: 20px;
+  font-weight: 700;
+`
+
+export const AulasContainer = styled.div`
   margin-top: 20px;
 `
 
-export const NumberAula = styled.h1`
-  margin-right: 20px;
-`
-
-export const BannerAula = styled.img`
-  width: 100px;
-  height: 100px;
-`
-
-export const TituloAula = styled.h1`
-  margin-right: 20px;
-`
-
-export const ConcluirIcone = styled(CheckIcon)`
-  width: 50px;
-  height: 50px;
-  background-color: #ff9740;
+export const CheckIconAula = styled(CheckIcon)`
   color: white;
-  font-weight: bold;
-  border: none;
+  background-color: #6df1fe;
   border-radius: 50%;
   cursor: pointer;
-`
-
-export const DescContainer = styled.div`
-  width: 95%;
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-content: start;
-`
-
-export const DescTextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
 `

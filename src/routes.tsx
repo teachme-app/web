@@ -8,7 +8,8 @@ import { MeusCursos } from './pages/MeusCursos'
 import { Perfil } from './pages/Perfil'
 import { Downloads } from './pages/Downloads'
 import { Aula } from './pages/Aula'
-import Materiais from './pages/Material'
+import { CriarCurso } from './pages/CriarCurso'
+import { EditarCurso } from './pages/EditarCurso'
 
 export const appRoutes = createBrowserRouter([
   {
@@ -47,9 +48,12 @@ export const appRoutes = createBrowserRouter([
     path: '/aula',
     element: <Aula />,
   },
-
   {
-    path: '/materiais',
-    element: <Materiais />,
+    path: '/criar-curso',
+    element: <CriarCurso />,
+  },
+  {
+    path: '/editar-curso',
+    element: <EditarCurso />,
   },
 ])
