@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material'
+import { Grid, ListItemText } from '@mui/material'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -57,4 +57,11 @@ export const Input = styled.input`
   border-radius: 50px;
   border: none;
   padding-left: 20px;
+`
+
+export const MenuMobileLink = styled(ListItemText)`
+  text-decoration: none;
+  color: #ff9740;
+  font-size: 20px;
+  text-decoration: none;
 `

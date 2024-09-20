@@ -7,7 +7,6 @@ import {
   Drawer,
   List,
   ListItem,
-  ListItemText,
   ListItemButton,
   Avatar,
   MenuItem,
@@ -194,13 +193,13 @@ export const MenuNav = () => {
           >
             <List>
               {listMenu.map(({ tab, link }) => (
-                <ListItem key={tab} disablePadding>
-                  <Link to={link}>
+                <Link to={link} style={{ textDecoration: 'none' }}>
+                  <ListItem key={tab} disablePadding>
                     <ListItemButton>
-                      <ListItemText primary={tab} />
+                      <S.MenuMobileLink primary={tab} />
                     </ListItemButton>
-                  </Link>
-                </ListItem>
+                  </ListItem>
+                </Link>
               ))}
             </List>
           </Drawer>
