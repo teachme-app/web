@@ -36,6 +36,33 @@ export const MenuNav = () => {
     setAnchorEl(null)
   }
 
+  const listMenu = [
+    {
+      tab: 'Início',
+      link: '/',
+    },
+    {
+      tab: 'Baixados',
+      link: '/downloads',
+    },
+    {
+      tab: 'Material',
+      link: '/materiais',
+    },
+    {
+      tab: 'Cursos',
+      link: '/meus-cursos',
+    },
+    {
+      tab: 'Carrinho',
+      link: '/carrinho',
+    },
+    {
+      tab: 'Perfil',
+      link: '/perfil',
+    },
+  ]
+
   return (
     <S.Container container alignContent={'center'} gap={'10px'}>
       <Grid item xl={2} md={2} sm={4}>
@@ -166,11 +193,13 @@ export const MenuNav = () => {
             }}
           >
             <List>
-              {['Inicio', 'Baixados', 'Material', 'Cursos', 'Carrinho', 'Perfil'].map((text) => (
-                <ListItem key={text} disablePadding>
-                  <ListItemButton>
-                    <ListItemText primary={text} />
-                  </ListItemButton>
+              {listMenu.map(({ tab, link }) => (
+                <ListItem key={tab} disablePadding>
+                  <Link to={link}>
+                    <ListItemButton>
+                      <ListItemText primary={tab} />
+                    </ListItemButton>
+                  </Link>
                 </ListItem>
               ))}
             </List>
