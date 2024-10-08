@@ -1,3 +1,4 @@
+import { Box } from '@mui/material'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -67,4 +68,15 @@ export const FormControlStyleButton = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+`
+
+export const BoxModal = styled(Box)`
+  position: 'absolute';
+  top: '50%';
+  left: '50%';
+  transform: 'translate(-50%, -50%)';
+  width: 400;
+  border: '2px solid #000';
+  background-color: 'white';
+  box-shadow: 24;
 `
