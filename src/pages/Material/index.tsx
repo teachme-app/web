@@ -21,16 +21,16 @@ export default class Materiais extends Component {
       <S.Menu>
         <MenuNav />
         </S.Menu>
-
+        <div data-aos="fade-left" data-aos-duration="5000" data-aos-once="false" >
         <S.Exibicao>
-        <img src = "Mockup1.svg" ></img>
+        <img src = "Mockup1.svg"  ></img>
         <S.exibicao2>
         <img src = "Mockup2.svg" ></img>
         </S.exibicao2>
         </S.Exibicao>
-
+        </div>
         <S.Container>
-          <div className="div" data-aos="fade-left" data-aos-duration="3000" data-aos-once="false">
+          <div className="div" data-aos="fade-left" data-aos-duration="5000" data-aos-once="false">
 
             <h1>DESCRIÇÃO</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac consectetur metus. Fusce vel dapibus mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In ultricies turpis nec enim posuere, vitae interdum erat iaculis. Nulla facilisi. Donec commodo iaculis fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ultrices, sapien et efficitur porta, mauris metus commodo urna, nec ultricies libero felis in diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla imperdiet quis nunc sed vehicula.
@@ -45,6 +45,23 @@ Phasellus nec tincidunt arcu. Aenean maximus lorem sed arcu laoreet, a porta sap
           </div>
         </S.Container>
 
+
+        <S.Informacoes>
+        <div className="div" data-aos="fade-left" data-aos-duration="3000" data-aos-once="false">
+
+        <ul>
+          <li>Tamanho: XXX</li>
+          <li>Quantidade de Páginas: XXX</li>
+          <li>Criador: XXX</li>
+
+        </ul>
+
+                  </div>
+        </S.Informacoes>
+        <div className="div" data-aos="fade-left" data-aos-duration="3000" data-aos-once="false">
+
+        <S.Button>Adicionar Ao Carrinho</S.Button>
+        </div>
 
       </>
     );

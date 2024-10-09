@@ -12,6 +12,7 @@ import Materiais from './pages/Material'
 import { CriarCurso } from './pages/Criar Curso'
 import { EditarCurso } from './pages/Editar Curso'
 
+
 export const appRoutes = createBrowserRouter([
   {
     path: '/login',
@@ -62,4 +63,5 @@ export const appRoutes = createBrowserRouter([
     path: '/editar-curso',
     element: <EditarCurso />,
   },
+
 ])
