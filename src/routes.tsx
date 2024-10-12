@@ -11,7 +11,7 @@ import { Aula } from './pages/Aula'
 import Materiais from './pages/Material'
 import { CriarCurso } from './pages/Criar Curso'
 import { EditarCurso } from './pages/Editar Curso'
-
+import { Chat } from './pages/Chat'
 
 export const appRoutes = createBrowserRouter([
   {
@@ -63,5 +63,8 @@ export const appRoutes = createBrowserRouter([
     path: '/editar-curso',
     element: <EditarCurso />,
   },
-
+  {
+    path: '/chat',
+    element: <Chat />,
+  },
 ])

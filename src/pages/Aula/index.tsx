@@ -6,37 +6,47 @@ export const Aula = () => {
     <>
       <MenuNav />
       <S.Container>
-        <S.LeftContainer>
-          <S.VideoContainer>
-            <S.Video src='https://www.youtube.com/embed/7e90gBu4pas' />
-          </S.VideoContainer>
-          <S.DescContainer>
-            <S.Rating>
-              <S.StarIcon />
-              <S.StarIcon />
-              <S.StarIcon />
-              <S.StarIcon />
-              <S.StarIcon />
-            </S.Rating>
-            <div style={{ marginTop: '35px', alignSelf: 'start' }}>
-              <S.Conclusion>Concluir</S.Conclusion>
-              <S.ConcluirIcone />
-            </div>
-          </S.DescContainer>
-          <S.DescTextContainer>
-            <S.VideoTitle>Titulo do Curso</S.VideoTitle>
-            <S.VideoDescription>Descrição do Curso</S.VideoDescription>
-          </S.DescTextContainer>
-        </S.LeftContainer>
-        <S.RightContainer>
-          <S.RightTitle>Lista de Conteudo</S.RightTitle>
-          <S.Aula>
-            <S.NumberAula>1</S.NumberAula>
-            <S.BannerAula src='/curso1.png' />
-            <S.TituloAula>Aula 1</S.TituloAula>
-            <S.ConcluirIcone />
-          </S.Aula>
-        </S.RightContainer>
+        <S.MainContent>
+          <img src='/naka.jpg' alt='Imagem da aula' />
+          <h2>Nome da aula</h2>
+          <S.Profile>
+            <img src='/mai.png' alt='Imagem do Professor' />
+            <p>Perfil do professor</p>
+          </S.Profile>
+          <S.Rating>
+            <input type='radio' id='star5' name='rating' value='5' />
+            <label htmlFor='star5'>★</label>
+            <input type='radio' id='star4' name='rating' value='4' />
+            <label htmlFor='star4'>★</label>
+            <input type='radio' id='star3' name='rating' value='3' />
+            <label htmlFor='star3'>★</label>
+            <input type='radio' id='star2' name='rating' value='2' />
+            <label htmlFor='star2'>★</label>
+            <input type='radio' id='star1' name='rating' value='1' />
+            <label htmlFor='star1'>★</label>
+          </S.Rating>
+          <S.Description>
+            Descrição da aula
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+          </S.Description>
+        </S.MainContent>
+        <S.Sidebar>
+          <S.SidebarItem>
+            <h3>Nome da aula</h3>
+            <img src='/images.jpeg' alt='Imagem da aula' />
+            <p>Lorem Ipsum is simply dummy text of the printing industry...</p>
+          </S.SidebarItem>
+          <S.SidebarItem>
+            <h3>Nome da aula</h3>
+            <img src='/images.jpeg' alt='Imagem da aula' />
+            <p>Lorem Ipsum is simply dummy text of the printing industry...</p>
+          </S.SidebarItem>
+          <S.SidebarItem>
+            <h3>Nome da aula</h3>
+            <img src='/images.jpeg' alt='Imagem da aula' />
+            <p>Lorem Ipsum is simply dummy text of the printing industry...</p>
+          </S.SidebarItem>
+        </S.Sidebar>
       </S.Container>
     </>
   )
