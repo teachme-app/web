@@ -38,13 +38,17 @@ margin-top: 6%;
 
 export const TitleContainer = styled.div`
     h1 {
-      
-        font-size:50px;
+        display:flex;
+        font-size:4vh;
         text-decoration: underline;
         color: #FF9740;
+        
+        
     }
         margin-top: 2%;
         margin-left: 4%;
+        display: flex;
+        height: 10vh;
         
 `
 
@@ -54,13 +58,13 @@ margin-left: 4%;
 color: #545454;
 font-weight: bold;
 `
-export const HeartButton = styled.button`
-margin-left: 91%;
-margin-top: -45%;
-height: 30%;
+export const ButtonHrt = styled.img`
+
 background-color: #00000000;
 border:none
-
+width: 80%;  
+height: 80%;
+margin-left: 65%;
 
 `
 export const RightSideContainer = styled.div`
@@ -84,14 +88,14 @@ margin-right: auto;
 margin-top: 2%;
 h1{
 margin-left: 48%;
-font-size: 370%;
+font-size: 450%;
 margin-top: -33%;
 color: #FF9740;
 }
 
 p { 
 color: #FBF4EA;
-margin-top: 13%;
+margin-top: 20%;
 margin-left: 5%;
 margin-right: 1%;
 font-size: 99%;
@@ -109,9 +113,10 @@ h1{
 font-size: 50px;
 color: #FF9740;
 }
+margin-left: 10%;
 `
 export const button = styled.button`
-margin-left: -5px;
+margin-left: -7%;
 margin-top: 5%;
 
 font-size: 30px;

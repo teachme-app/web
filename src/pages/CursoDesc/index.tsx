@@ -65,6 +65,8 @@ export const DescCursos = () => {
           <S.TitleContainer>
 
             <h1>Título do curso</h1>
+            <S.ButtonHrt src='/coracao.svg' alt='pessoa'  />
+
             <p></p>
           </S.TitleContainer>
 
@@ -79,9 +81,7 @@ export const DescCursos = () => {
             </p>
           </S.TextContainer>
 
-          <S.HeartButton>
-            <img src='/coracao.svg' alt='coracao' width='82' height='81' />
-          </S.HeartButton>
+          
 
         </S.LeftSideContainer>
 
