@@ -60,9 +60,9 @@ export const Carrinho = () => {
       <S.Container>
         <S.CursosContainer>
           <S.SingleCourseContainer>
-            <S.ImagemCursoContainer src='/place-holder-image.png' />
+            <S.ImagemCursoContainer src='/curso1.png' />
             <S.DescriptionContainer>
-              <S.CourseTitle>Curso de React</S.CourseTitle>
+              <S.CourseTitle>Curso de Programação</S.CourseTitle>
               <S.CoursePrice>R$ 100,00</S.CoursePrice>
               <S.QuantityContainer>
                 <S.PlusIconContainer>
@@ -76,9 +76,9 @@ export const Carrinho = () => {
             </S.DescriptionContainer>
           </S.SingleCourseContainer>
           <S.SingleCourseContainer>
-            <S.ImagemCursoContainer src='/place-holder-image.png' />
+            <S.ImagemCursoContainer src='/curso_eletronica.png' />
             <S.DescriptionContainer>
-              <S.CourseTitle>Curso de React</S.CourseTitle>
+              <S.CourseTitle>Curso de Eletrônica</S.CourseTitle>
               <S.CoursePrice>R$ 100,00</S.CoursePrice>
               <S.QuantityContainer>
                 <S.PlusIconContainer>
@@ -92,9 +92,9 @@ export const Carrinho = () => {
             </S.DescriptionContainer>
           </S.SingleCourseContainer>
           <S.SingleCourseContainer>
-            <S.ImagemCursoContainer src='/place-holder-image.png' />
+            <S.ImagemCursoContainer src='/curso_reparos.png' />
             <S.DescriptionContainer>
-              <S.CourseTitle>Curso de React</S.CourseTitle>
+              <S.CourseTitle>Curso de Reparos</S.CourseTitle>
               <S.CoursePrice>R$ 100,00</S.CoursePrice>
               <S.QuantityContainer>
                 <S.PlusIconContainer>
@@ -108,9 +108,9 @@ export const Carrinho = () => {
             </S.DescriptionContainer>
           </S.SingleCourseContainer>
           <S.SingleCourseContainer>
-            <S.ImagemCursoContainer src='/place-holder-image.png' />
+            <S.ImagemCursoContainer src='/curso_micro.jpg' />
             <S.DescriptionContainer>
-              <S.CourseTitle>Curso de React</S.CourseTitle>
+              <S.CourseTitle>Curso de MicroServiços</S.CourseTitle>
               <S.CoursePrice>R$ 100,00</S.CoursePrice>
               <S.QuantityContainer>
                 <S.PlusIconContainer>
