@@ -12,6 +12,7 @@ export const Curso = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #999;
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -27,7 +28,7 @@ export const Container = styled.div`
 
 export const CursoImg = styled.img`
   width: 100%;
-  height: 200px;
+  height: 250px;
   border-radius: 10px;
 `
 
@@ -35,6 +36,7 @@ export const ContainerText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
   justify-content: center;
   text-align: center;
   margin-top: 20px;
@@ -49,4 +51,5 @@ export const FormControlStyle = styled(FormControl)`
 
 export const Title = styled.h1`
   margin-left: 40px;
+  text-decoration: none;
 `

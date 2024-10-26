@@ -33,25 +33,25 @@ export const Downloads = () => {
         <S.Curso>
           <S.CursoImg src='/curso1.png' />
           <S.ContainerText>
-            <h1>Titulo do Curso</h1>
+            <h1>Curso de programação</h1>
           </S.ContainerText>
         </S.Curso>
         <S.Curso>
-          <S.CursoImg src='/curso1.png' />
+          <S.CursoImg src='/curso_eletronica.png' />
           <S.ContainerText>
-            <h1>Titulo do Curso</h1>
+            <h1>Curso de eletrônica</h1>
           </S.ContainerText>
         </S.Curso>
         <S.Curso>
-          <S.CursoImg src='/curso1.png' />
+          <S.CursoImg src='/curso_micro.jpg' />
           <S.ContainerText>
-            <h1>Titulo do Curso</h1>
+            <h1>Curso de microserviços</h1>
           </S.ContainerText>
         </S.Curso>
         <S.Curso>
-          <S.CursoImg src='/curso1.png' />
+          <S.CursoImg src='/curso_reparos.png' />
           <S.ContainerText>
-            <h1>Titulo do Curso</h1>
+            <h1>Curso de Reparos</h1>
           </S.ContainerText>
         </S.Curso>
       </S.ContainerCursos>

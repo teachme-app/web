@@ -5,24 +5,24 @@ export const CarouselCursos = () => {
   return (
     <S.CarouselCursos>
       <Carousel.Item interval={1000}>
-        <img src='/imagem.jpg' width={'100%'} height={'372px'} />
+        <img src='/banner_mat.png' width={'100%'} height={'372px'} />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Curso de matemática</h3>
+          <p>Aprenda agora matemática do básico ao avançado!</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={500}>
-        <img src='/imagem2.jpg' width={'100%'} height={'372px'}/>
+        <img src='/banner_bio.png' width={'100%'} height={'372px'} />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Curso de biologia</h3>
+          <p>Explore os mistérios da vida e da natureza com nosso curso de biologia!</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img src='/imagem.jpg' width={'100%'} height={'372px'} />
+        <img src='/banner_fis.png' width={'100%'} height={'372px'} />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <h3>Curso de física</h3>
+          <p>Domine os conceitos fundamentais da física e suas aplicações práticas!</p>
         </Carousel.Caption>
       </Carousel.Item>
     </S.CarouselCursos>

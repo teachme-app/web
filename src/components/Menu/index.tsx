@@ -16,7 +16,7 @@ import {
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import { Link } from 'react-router-dom'
-import { Logout, Settings } from '@mui/icons-material'
+import { Chat, Logout, PlusOne, Settings } from '@mui/icons-material'
 
 export const MenuNav = () => {
   const [openMenu, setOpenMenu] = useState(false)
@@ -170,6 +170,43 @@ export const MenuNav = () => {
                 Settings
               </Link>
             </MenuItem>
+
+            <MenuItem>
+              <Link
+                style={{
+                  textDecoration: 'none',
+                  color: 'black',
+                  marginTop: '5px',
+                  display: 'flex',
+                  flexDirection: 'row',
+                }}
+                to={'/chat'}
+              >
+                <ListItemIcon>
+                  <Chat fontSize='small' />
+                </ListItemIcon>
+                Chat
+              </Link>
+            </MenuItem>
+
+            <MenuItem>
+              <Link
+                style={{
+                  textDecoration: 'none',
+                  color: 'black',
+                  marginTop: '5px',
+                  display: 'flex',
+                  flexDirection: 'row',
+                }}
+                to={'/criar-curso'}
+              >
+                <ListItemIcon>
+                  <PlusOne fontSize='small' />
+                </ListItemIcon>
+                Adicionar curso
+              </Link>
+            </MenuItem>
+
             <MenuItem onClick={handleClose}>
               <ListItemIcon>
                 <Logout fontSize='small' />

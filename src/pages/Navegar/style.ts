@@ -29,10 +29,11 @@ export const Cursos = styled.div`
   grid-template-columns: repeat(3, 1fr);
   row-gap: 20px;
   column-gap: 40px;
+  justify-items: center;
 `
 
 export const Curso = styled.div`
-  width: 100%;
+  width: 400px;
   height: 250px;
   background-size: cover;
   border-radius: 5px;

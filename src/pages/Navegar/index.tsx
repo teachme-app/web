@@ -15,19 +15,19 @@ export const Navegar = () => {
           <Link to='/curso-desc'>
             <S.Curso>
               <S.CursoImg src='/curso1.png' />
-              <S.CursoTitle>Curso Técnico</S.CursoTitle>
+              <S.CursoTitle>Curso de Programação</S.CursoTitle>
             </S.Curso>
           </Link>
           <Link to='/curso-desc'>
             <S.Curso>
-              <S.CursoImg src='/curso1.png' />
-              <S.CursoTitle>Curso Técnico</S.CursoTitle>
+              <S.CursoImg src='/curso_eletronica.png' />
+              <S.CursoTitle>Curso de eletrônica</S.CursoTitle>
             </S.Curso>
           </Link>
           <Link to='/curso-desc'>
             <S.Curso>
-              <S.CursoImg src='/curso1.png' />
-              <S.CursoTitle>Curso Técnico</S.CursoTitle>
+              <S.CursoImg src='/curso_reparos.png' />
+              <S.CursoTitle>Curso de Reparos Gerais</S.CursoTitle>
             </S.Curso>
           </Link>
         </S.Cursos>
