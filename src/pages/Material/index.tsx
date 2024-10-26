@@ -8,7 +8,7 @@ export const Materiais = () => {
       <MenuNav />
       <S.CourseContent>
         <S.CourseImage>
-          <img src='material.jpeg' alt='Imagem Material' />
+          <img src='/material.jpeg' alt='Imagem Material' />
         </S.CourseImage>
         <S.CourseInfo>
           <h1>Matemática Básica</h1>
