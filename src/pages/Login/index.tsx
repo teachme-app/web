@@ -1,15 +1,16 @@
 import { Facebook, Google, LinkedIn } from '@mui/icons-material'
 import * as S from './style'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 import { useState } from 'react'
-import Cookies from 'js-cookie'
+import { useAuth } from '../../utils/auth'
 
 export const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [message, setMessage] = useState('')
   const [error, setError] = useState(false)
+
+  const { login } = useAuth()
 
   const user = {
     email,
@@ -19,28 +20,15 @@ export const Login = () => {
   const handleLogin = async () => {
     const delay = (s: number) => new Promise((res) => setTimeout(res, s * 1000))
 
-    await axios
-      .post('http://localhost:3000/api/v1/login', user)
-      .then((response) => {
-        Cookies.set('token', response.data.token)
-        console.log(Cookies.get('token'))
-        delay(1).then(() => {
-          window.location.href = '/'
-        })
-      })
-      .catch((error) => {
-        console.log(error)
-        if (error.response.data[0] && error.response.data[0].code === 'too_small') {
-          setMessage('A senha precisa ter pelo menos 8 caracteres')
-          setError(true)
-        } else if (error.response.data[0] && error.response.data[0].code === 'invalid_string') {
-          setMessage('Email inválido')
-          setError(true)
-        } else {
-          setMessage(error.response.data.error)
-          setError(true)
-        }
-      })
+    try {
+      await login(user)
+      delay(1)
+      window.location.href = '/cursos'
+    } catch (e) {
+      console.log(e)
+      setMessage('Email ou senha incorretos')
+      setError(true)
+    }
   }
 
   return (
