@@ -38,7 +38,7 @@ export const MenuNav = () => {
   const listMenu = [
     {
       tab: 'Início',
-      link: '/',
+      link: '/cursos',
     },
     {
       tab: 'Baixados',
@@ -74,7 +74,7 @@ export const MenuNav = () => {
       </Grid>
       <Hidden mdDown>
         <S.MenuItem item xl={1.1} md={1.1}>
-          <S.ItemLink to='/'>início</S.ItemLink>
+          <S.ItemLink to='/cursos'>início</S.ItemLink>
         </S.MenuItem>
         <S.MenuItem item xl={1.1} md={1.1}>
           <S.ItemLink to='/downloads'>baixados</S.ItemLink>
