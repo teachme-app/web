@@ -1,8 +1,9 @@
 import { Facebook, Google, LinkedIn } from '@mui/icons-material'
 import * as S from './style'
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import { useAuth } from '../../utils/auth'
+import Cookies from 'js-cookie'
 
 export const Login = () => {
   const [email, setEmail] = useState('')
@@ -11,11 +12,19 @@ export const Login = () => {
   const [error, setError] = useState(false)
 
   const { login } = useAuth()
+  const navigate = useNavigate()
 
   const user = {
     email,
     password,
   }
+
+  useEffect(() => {
+    const logado = Cookies.get('logado')
+    if (logado) {
+      navigate('/cursos')
+    }
+  }, [navigate])
 
   const handleLogin = async () => {
     const delay = (s: number) => new Promise((res) => setTimeout(res, s * 1000))
@@ -36,7 +45,7 @@ export const Login = () => {
       <S.Container>
         <S.LeftSideContainer>
           <div>
-            <S.Logo src='public/logoSVG.svg' alt='logoSVG' width='200' />
+            <S.Logo src='/logoSVG.svg' alt='logoSVG' width='200' />
           </div>
           <S.TextContainer>
             <h1>Bem-Vindo!</h1>
@@ -45,7 +54,7 @@ export const Login = () => {
               <S.LeftButton>Cadastro</S.LeftButton>
             </Link>
           </S.TextContainer>
-          <S.Wave src='public/wave.svg' alt='' id='wave' />
+          <S.Wave src='/wave.svg' alt='' id='wave' />
         </S.LeftSideContainer>
         <S.RightSideContainer id='container-direita'>
           <S.Formulario>
