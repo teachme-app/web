@@ -1,8 +1,8 @@
 import { Facebook, Google, LinkedIn } from '@mui/icons-material'
 import * as S from './style'
-import axios from 'axios'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { apiInstance } from '../../utils/axios'
 
 export const Cadastro = () => {
   const document = '99999999999'
@@ -23,6 +23,8 @@ export const Cadastro = () => {
     birth_date: birth_date,
   }
 
+  const navigate = useNavigate()
+
   const handleReset = () => {
     setName('')
     setEmail('')
@@ -33,15 +35,16 @@ export const Cadastro = () => {
 
   const handleCreateUser = async () => {
     console.log(user)
-    await axios
-      .post('http://localhost:3000/api/v1/user', user)
+
+    await apiInstance
+      .post('/user', user)
       .then((response) => {
         console.log(response)
         setMessage('Usuário criado com sucesso!')
         handleReset()
         setError(false)
         delay(1).then(() => {
-          window.location.href = '/login'
+          navigate('/login')
         })
       })
       .catch((error) => {

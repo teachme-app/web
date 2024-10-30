@@ -80,3 +80,7 @@ export const BoxModal = styled(Box)`
   background-color: 'white';
   box-shadow: 24;
 `
+
+export const Message = styled.p`
+  color: green;
+`

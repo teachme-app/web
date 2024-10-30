@@ -15,8 +15,10 @@ import {
   Menu,
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Chat, Logout, PlusOne, Settings } from '@mui/icons-material'
+import { useAuth } from '../../utils/auth'
+import Cookies from 'js-cookie'
 
 export const MenuNav = () => {
   const [openMenu, setOpenMenu] = useState(false)
@@ -28,11 +30,21 @@ export const MenuNav = () => {
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
+  const { logout } = useAuth()
+  const navigate = useNavigate()
+
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget)
   }
+
   const handleClose = () => {
     setAnchorEl(null)
+  }
+
+  const handleLogout = () => {
+    logout()
+    setAnchorEl(null)
+    navigate('/login')
   }
 
   const listMenu = [
@@ -65,7 +77,7 @@ export const MenuNav = () => {
   return (
     <S.Container container alignContent={'center'} gap={'10px'}>
       <Grid item xl={2} md={2} sm={4}>
-        <Link to={'/'}>
+        <Link to={'/cursos'}>
           <S.LogoItem src='/logoSVG.svg' width='95%' height='44px' />
         </Link>
       </Grid>
@@ -188,26 +200,27 @@ export const MenuNav = () => {
                 Chat
               </Link>
             </MenuItem>
+            {Cookies.get('role') === 'TEACHER' ? (
+              <MenuItem>
+                <Link
+                  style={{
+                    textDecoration: 'none',
+                    color: 'black',
+                    marginTop: '5px',
+                    display: 'flex',
+                    flexDirection: 'row',
+                  }}
+                  to={'/criar-curso'}
+                >
+                  <ListItemIcon>
+                    <PlusOne fontSize='small' />
+                  </ListItemIcon>
+                  Adicionar curso
+                </Link>
+              </MenuItem>
+            ) : null}
 
-            <MenuItem>
-              <Link
-                style={{
-                  textDecoration: 'none',
-                  color: 'black',
-                  marginTop: '5px',
-                  display: 'flex',
-                  flexDirection: 'row',
-                }}
-                to={'/criar-curso'}
-              >
-                <ListItemIcon>
-                  <PlusOne fontSize='small' />
-                </ListItemIcon>
-                Adicionar curso
-              </Link>
-            </MenuItem>
-
-            <MenuItem onClick={handleClose}>
+            <MenuItem onClick={handleLogout}>
               <ListItemIcon>
                 <Logout fontSize='small' />
               </ListItemIcon>

@@ -1,6 +1,6 @@
-import axios from 'axios'
 import { createContext, ReactNode, useContext, useEffect, useState } from 'react'
 import Cookies from 'js-cookie'
+import { apiInstance } from './axios'
 
 interface AuthContextType {
   user: string | null
@@ -26,7 +26,14 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const login = async (userAuth: { email: string; password: string }) => {
     try {
-      const response = await axios.post('http://localhost:3000/api/v1/login', userAuth)
+      // const response = await axios.post('http://localhost:3000/api/v1/login', userAuth)
+      const response = await apiInstance.post('/login', userAuth)
+      const user = await apiInstance.get('/user-token', {
+        headers: {
+          Authorization: `Bearer ${response.data.token}`,
+        },
+      })
+      Cookies.set('role', String(user.data.role))
       Cookies.set('token', String(response.data.token))
       Cookies.set('logado', 'true')
     } catch (error) {
@@ -37,6 +44,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const logout = () => {
     Cookies.remove('token')
+    Cookies.remove('logado')
     setUser(null)
   }
 

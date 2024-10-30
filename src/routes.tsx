@@ -23,7 +23,7 @@ export const appRoutes = createBrowserRouter([
       </ProtectedRoute>
     ),
     children: [
-      { path: 'curso-desc', element: <DescCursos /> },
+      { path: 'curso-desc/:courseId', element: <DescCursos /> },
       { path: 'cursos', element: <Navegar /> },
       { path: 'carrinho', element: <Carrinho /> },
       { path: 'meus-cursos', element: <MeusCursos /> },
