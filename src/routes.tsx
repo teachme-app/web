@@ -32,7 +32,7 @@ export const appRoutes = createBrowserRouter([
       { path: 'aula', element: <Aula /> },
       { path: 'materiais', element: <Materiais /> },
       { path: 'criar-curso', element: <CriarCurso /> },
-      { path: 'editar-curso', element: <EditarCurso /> },
+      { path: 'editar-curso/:courseId', element: <EditarCurso /> },
       { path: 'chat', element: <Chat /> },
     ],
   },

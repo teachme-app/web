@@ -33,6 +33,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
           Authorization: `Bearer ${response.data.token}`,
         },
       })
+
+      Cookies.set('user', String(user.data.id))
       Cookies.set('role', String(user.data.role))
       Cookies.set('token', String(response.data.token))
       Cookies.set('logado', 'true')

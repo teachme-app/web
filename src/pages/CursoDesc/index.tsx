@@ -29,6 +29,8 @@ export const DescCursos = () => {
     graduation: '',
   })
 
+  const [teacherId, setTeacherId] = useState('')
+
   const getCurso = async () => {
     await apiInstance
       .get(`/course/?id=${courseId}`, {
@@ -39,6 +41,7 @@ export const DescCursos = () => {
       .then((response) => {
         setCurso(response.data)
         getTeacherCurso(response.data.userId)
+        setTeacherId(response.data.userId)
         console.log(curso)
       })
   }
@@ -79,6 +82,11 @@ export const DescCursos = () => {
           <S.TextContainer>
             <p>{curso.description}</p>
           </S.TextContainer>
+          {teacherId === Cookies.get('user') ? (
+            <S.TextContainer>
+              <a href={`/editar-curso/${courseId}`}>Editar curso</a>
+            </S.TextContainer>
+          ) : null}
         </S.LeftSideContainer>
 
         <S.RightSideContainer id='container-direita'>

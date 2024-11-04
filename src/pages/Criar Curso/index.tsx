@@ -73,14 +73,6 @@ export const CriarCurso = () => {
             sx={{ marginBottom: '20px' }}
           />
           <TextField
-            value={curso.hours}
-            onChange={(e) => setCurso({ ...curso, hours: e.target.value })}
-            label='Carga Horária'
-            variant='outlined'
-            fullWidth
-            sx={{ marginBottom: '20px' }}
-          />
-          <TextField
             value={curso.banner}
             onChange={(e) => setCurso({ ...curso, banner: e.target.value })}
             label='Link da Imagem'
