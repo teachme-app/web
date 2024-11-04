@@ -72,6 +72,7 @@ export const EditarCurso = () => {
       <MenuNav />
       <S.ContainerForm>
         <S.Title>Editar Curso</S.Title>
+        {message && <p style={{ color: 'green' }}>{message}</p>}
         <S.Form>
           <TextField
             label='Titulo do Curso'
