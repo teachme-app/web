@@ -13,10 +13,13 @@ import { CriarCurso } from './pages/Criar Curso'
 import { EditarCurso } from './pages/Editar Curso'
 import { Chat } from './pages/Chat'
 import ProtectedRoute from './utils/protectedRoute'
+import { CriarAula } from './pages/Criar Aula'
+import NotFoundPage from './pages/404'
 
 export const appRoutes = createBrowserRouter([
   {
     path: '/',
+    errorElement: <NotFoundPage />,
     element: (
       <ProtectedRoute>
         <Outlet />
@@ -24,6 +27,7 @@ export const appRoutes = createBrowserRouter([
     ),
     children: [
       { path: 'curso-desc/:courseId', element: <DescCursos /> },
+      { path: 'criar-aula/:id', element: <CriarAula /> },
       { path: 'cursos', element: <Navegar /> },
       { path: 'carrinho', element: <Carrinho /> },
       { path: 'meus-cursos', element: <MeusCursos /> },

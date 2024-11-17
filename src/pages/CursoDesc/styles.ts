@@ -69,7 +69,7 @@ export const div2 = styled.div`
   background-color: #383141;
   border-radius: 40px;
   width: 90%;
-  height: 60%;
+  height: 65%;
   margin-left: auto;
   margin-right: auto;
   h1 {

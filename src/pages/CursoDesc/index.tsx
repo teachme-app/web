@@ -4,6 +4,7 @@ import * as S from './styles'
 import { apiInstance } from '../../utils/axios'
 import Cookies from 'js-cookie'
 import { useParams } from 'react-router-dom'
+import useCourse from '../../hook/useCourse'
 
 export const DescCursos = () => {
   const { courseId } = useParams()
@@ -28,6 +29,8 @@ export const DescCursos = () => {
     pfp: '',
     graduation: '',
   })
+
+  const course = useCourse()
 
   const [teacherId, setTeacherId] = useState('')
 
@@ -64,6 +67,16 @@ export const DescCursos = () => {
     console.log(courseId)
   }, [])
 
+  const addCourse = () => {
+    course.addCourse({
+      id: courseId ? courseId : '',
+      name: curso.title,
+      description: curso.description,
+      bannerUrl: curso.banner,
+      price: curso.price,
+    })
+  }
+
   return (
     <>
       <MenuNav />
@@ -83,9 +96,14 @@ export const DescCursos = () => {
             <p>{curso.description}</p>
           </S.TextContainer>
           {teacherId === Cookies.get('user') ? (
-            <S.TextContainer>
-              <a href={`/editar-curso/${courseId}`}>Editar curso</a>
-            </S.TextContainer>
+            <>
+              <S.TextContainer>
+                <a href={`/editar-curso/${courseId}`}>Editar curso</a>
+              </S.TextContainer>
+              <S.TextContainer>
+                <a href={`/criar-aula/${courseId}`}>Adicionar aula</a>
+              </S.TextContainer>
+            </>
           ) : null}
         </S.LeftSideContainer>
 
@@ -94,7 +112,7 @@ export const DescCursos = () => {
             <div>
               <S.img2 src={'/PessoaBolinha.png'} alt='pessoa' />
               <h1>{teacher.name}</h1>
-              <p>{teacher.graduation}</p>
+              <p style={{ marginTop: '100px' }}>{teacher.graduation}</p>
             </div>
           </S.div2>
 
@@ -104,7 +122,13 @@ export const DescCursos = () => {
                 <h1>
                   {new Intl.NumberFormat('pt-br', { style: 'currency', currency: 'BRL' }).format(curso.price)}
                 </h1>
-                <S.button> Adicionar ao Carrinho </S.button>
+                {course.courses.some((c) => c.id === courseId) ? (
+                  <S.button onClick={() => course.removeCourse(courseId ? courseId : '')}>
+                    Remover do Carrinho
+                  </S.button>
+                ) : (
+                  <S.button onClick={addCourse}>Adicionar ao Carrinho</S.button>
+                )}
               </div>
             </S.div3>
           </S.BottomSideContainer>
