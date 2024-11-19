@@ -9,18 +9,11 @@ export const Container = styled.div`
 
 export const MainContent = styled.div`
   flex: 3;
-  min-width: 300px;
   background-color: white;
   border-radius: 8px;
   padding: 15px;
+  height: 600px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  img {
-    width: 100%;
-    max-height: 650px;
-    border-radius: 8px;
-    background-color: #ddd;
-    object-fit: cover;
-  }
 `
 
 export const Profile = styled.div`

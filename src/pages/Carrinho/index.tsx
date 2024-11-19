@@ -2,17 +2,37 @@ import { useEffect, useState } from 'react'
 import { MenuNav } from '../../components/Menu'
 import useCourse from '../../hook/useCourse'
 import * as S from './style'
+import { apiInstance } from '../../utils/axios'
+import Cookies from 'js-cookie'
 
 export const Carrinho = () => {
   const course = useCourse()
   const [totalPrice, setTotalPrice] = useState(0)
   const [option, setOption] = useState('')
+  const [message, setMessage] = useState('')
 
   useEffect(() => {
     course.courses.map((c) => {
       setTotalPrice(totalPrice + c.price)
     })
   }, [])
+
+  const handleBuyCourse = async () => {
+    for (let i = 0; i < course.courses.length; i++) {
+      apiInstance
+        .post(
+          '/buy-course',
+          { course_id: course.courses[i].id },
+          { headers: { Authorization: `Bearer ${Cookies.get('token')}` } }
+        )
+        .then(() => {
+          setMessage('Curso comprado com sucesso!')
+        })
+        .catch(() => {
+          setMessage('Erro ao comprar curso!')
+        })
+    }
+  }
 
   return (
     <div>
@@ -45,7 +65,17 @@ export const Carrinho = () => {
           <S.Input placeholder='Número do cartão' hidden={option !== 'Cartão de crédito'} />
           <S.Input placeholder='Validade' hidden={option !== 'Cartão de crédito'} />
           <S.Input placeholder='CVV' hidden={option !== 'Cartão de crédito'} />
-          <S.SubmitButton>Prosseguir</S.SubmitButton>
+          {message && (
+            <div
+              style={{
+                color: message === 'Curso comprado com sucesso!' ? 'green' : 'red',
+                marginTop: '10px',
+              }}
+            >
+              {message}
+            </div>
+          )}
+          <S.SubmitButton onClick={handleBuyCourse}>Comprar</S.SubmitButton>
           <S.PriceContainer>
             <S.TotalPrice>
               Total:{' '}

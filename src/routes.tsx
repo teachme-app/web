@@ -33,7 +33,7 @@ export const appRoutes = createBrowserRouter([
       { path: 'meus-cursos', element: <MeusCursos /> },
       { path: 'perfil', element: <Perfil /> },
       { path: 'downloads', element: <Downloads /> },
-      { path: 'aula', element: <Aula /> },
+      { path: 'aula/:id', element: <Aula /> },
       { path: 'materiais', element: <Materiais /> },
       { path: 'criar-curso', element: <CriarCurso /> },
       { path: 'editar-curso/:courseId', element: <EditarCurso /> },
