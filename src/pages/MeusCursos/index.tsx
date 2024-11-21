@@ -1,4 +1,4 @@
-import { Grid, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material'
+import { Grid } from '@mui/material'
 import { MenuNav } from '../../components/Menu'
 import * as S from './style'
 import { useEffect, useState } from 'react'
@@ -7,7 +7,6 @@ import { apiInstance } from '../../utils/axios'
 import Cookies from 'js-cookie'
 
 export const MeusCursos = () => {
-  const [categoria, setCategoria] = useState('')
   const [userCursos, setUserCursos] = useState([])
 
   const getUserCursos = async () => {
