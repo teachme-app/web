@@ -6,7 +6,7 @@ enum URLS {
 }
 
 export const apiInstance = axios.create({
-  baseURL: URLS.DEV,
+  baseURL: URLS.PROD,
   headers: {
     'Content-Type': 'application/json',
   },
