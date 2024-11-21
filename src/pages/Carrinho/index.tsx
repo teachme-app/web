@@ -20,7 +20,7 @@ export const Carrinho = () => {
   const handleBuyCourse = async () => {
     for (let i = 0; i < course.courses.length; i++) {
       apiInstance
-        .post(
+        .patch(
           '/buy-course',
           { course_id: course.courses[i].id },
           { headers: { Authorization: `Bearer ${Cookies.get('token')}` } }
@@ -28,8 +28,9 @@ export const Carrinho = () => {
         .then(() => {
           setMessage('Curso comprado com sucesso!')
         })
-        .catch(() => {
+        .catch((e) => {
           setMessage('Erro ao comprar curso!')
+          console.log(e)
         })
     }
   }

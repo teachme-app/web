@@ -10,10 +10,6 @@ export const MeusCursos = () => {
   const [categoria, setCategoria] = useState('')
   const [userCursos, setUserCursos] = useState([])
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setCategoria(event.target.value as string)
-  }
-
   const getUserCursos = async () => {
     apiInstance
       .get('/user-courses', {
@@ -22,15 +18,17 @@ export const MeusCursos = () => {
         },
       })
       .then((response) => {
-        setUserCursos(response.data.Course)
+        setUserCursos(response.data.purchasedCourses)
       })
       .catch((error) => {
-        console.log(error)
+        console.error('error', error)
       })
   }
 
   useEffect(() => {
-    getUserCursos()
+    setTimeout(() => {
+      getUserCursos()
+    }, 1000)
   }, [])
 
   return (
@@ -39,16 +37,6 @@ export const MeusCursos = () => {
       <Grid container sx={{ marginTop: '30px' }}>
         <Grid item xs={10}>
           <S.Title>Meus Cursos</S.Title>
-        </Grid>
-        <Grid item xs={2}>
-          <S.FormControlStyle>
-            <InputLabel id='demo-simple-select-label'>Categorias</InputLabel>
-            <Select value={categoria} label='Categorias' onChange={handleChange}>
-              <MenuItem value={10}>TI</MenuItem>
-              <MenuItem value={20}>GERAL</MenuItem>
-              <MenuItem value={30}>ELETRÔNICA</MenuItem>
-            </Select>
-          </S.FormControlStyle>
         </Grid>
       </Grid>
 
